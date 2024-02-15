@@ -989,4 +989,5 @@ client.on("messageCreate", message => {
 
 
 
-client.login("OTcyNDU0MDI2MjM3MDc1NDY2.G2G4NK.0UFXUOP_tbztH9-ioW1iztbFzrUQ-zrLVvYCYc"); 
+require('dotenv').config()
+const TOKEN = process.env.TOKEN 
