@@ -32,9 +32,6 @@
     "discord-inviter": "^0.9.3",
     "discord.js": "^13.6.0",
     "nodemon": "^2.0.19"
-    "pm2": "^5.3.1",
     "pro.db": "^3.0.8",
-    "repl.uptime": "^0.0.12",
-    "replit-kill": "^1.0.8"
   }
 }
