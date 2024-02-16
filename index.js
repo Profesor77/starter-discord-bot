@@ -536,39 +536,6 @@ client.on("messageCreate", async message => {
 
 });
 
-// للتعامل مع الأخطاء
-process.on('uncaughtException', (error) => {
-  const channel = client.channels.cache.get(channelId);
-  if (channel) {
-    const embed = new MessageEmbed()
-      .setTitle('>  <:7284skullgem:1148946750376259754> | حدث خطأ')
-      .setDescription(`\`\`\`${error.stack}\`\`\``) // يقوم بإرسال الخطأ بشكل كود ليكون منظمًا في الإيمبد
-      .setColor('#ff0000');
-
-    channel.send({ embeds: [embed] });
-  } else {
-    console.error('لا يمكن العثور على القناة.');
-  }
-});
-
-// للتعامل مع الإشارة SIGINT
-process.on('SIGINT', () => {
-  const channel = client.channels.cache.get(channelId);
-  if (channel) {
-    const embed = new MessageEmbed()
-      .setTitle('>  <:6542stafficonred:1148945685530558524> | تم إيقاف تشغيل البوت')
-      .setDescription('البوت تم إيقاف تشغيله.')
-      .setColor('#ff0000');
-
-    channel.send({ embeds: [embed] });
-  } else {
-    console.error('لا يمكن العثور على القناة.');
-  }
-
-  // قم بإيقاف تشغيل البرنامج بعد إرسال الرسالة
-  process.exit();
-});
-
 //# Embed 
 client.on("ready" , () => {
   const guild1 = "1049508448309612574"
